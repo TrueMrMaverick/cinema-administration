@@ -1,18 +1,20 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.Windows.Forms;
 using HotelAdministation.Presenters;
+using HotelAdministation.Views.Base;
 
 namespace HotelAdministation.Views
 {
     public partial class MainView : Form, IView<MainViewPresenter>
     {
-        public MainViewPresenter Presenter { get; set; }
-
         public MainView()
         {
             InitializeComponent();
             mainMenu.Visible = false;
             baseLayout.Visible = false;
         }
+
+        public MainViewPresenter Presenter { get; set; }
 
         public void ActivateView()
         {
@@ -30,22 +32,28 @@ namespace HotelAdministation.Views
                 MdiParent = mdiParent as Form;
                 WindowState = FormWindowState.Maximized;
             }
+
             base.Show( /*owner as IWin32Window*/);
         }
-
-        public virtual bool ShowDialog(object owner)
+        
+        private void addSystemUserToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            return base.ShowDialog(owner as IWin32Window) == DialogResult.OK;
+//            Presenter.OpenAddUserDialog();
         }
 
-        private void addSystemUserToolStripMenuItem_Click(object sender, System.EventArgs e)
-        {
-            Presenter.OpenAddUserDialog();
-        }
-
-        private void exitToolStripMenuItem_Click(object sender, System.EventArgs e)
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Presenter.Exit();
+        }
+
+        private void cinemaListToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Presenter.InitializeCinemaListView();
+        }
+
+        private void filmListToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Presenter.InitializeFilmListView();
         }
     }
 }

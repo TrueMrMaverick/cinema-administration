@@ -1,4 +1,5 @@
 ﻿using HotelAdministation.Core.AppContext;
+using HotelAdministation.Presenters;
 using HotelAdministation.ViewModels.Enums;
 using HotelAdministation.Views;
 
@@ -6,13 +7,7 @@ namespace HotelAdministation.Presenters
 {
     public class MainViewPresenter : AbstractPresenter<MainView, MainViewPresenter>
     {
-
         private object CurrentPresenter { get; set; }
-
-        public override void Dispose()
-        {
-            View.Dispose();
-        }
 
         public override void InitializePresenter()
         {
@@ -23,7 +18,6 @@ namespace HotelAdministation.Presenters
 
         public override void ShowView()
         {
-            
             View.ActivateView();
         }
 
@@ -40,30 +34,56 @@ namespace HotelAdministation.Presenters
             View.mainMenu.Visible = true;
             View.baseLayout.Visible = true;
             View.addSystemUserToolStripMenuItem.Visible = AppGlobalContext.CurrentUser.Role == UserRoleEnum.ADMIN;
-            var checkInViewPresenter = AppGlobalContext.Current.Resolve<CheckInViewPresenter>();
-            checkInViewPresenter.ParentView = View;
-            checkInViewPresenter.InitializePresenter();
-            View.baseLayout.Controls.Add(checkInViewPresenter.View);
-            CurrentPresenter = checkInViewPresenter;
+            InitializeCinemaListView();
         }
 
-        public void OpenAddUserDialog()
+
+        public void InitializeCinemaListView()
         {
-            if (AppGlobalContext.CurrentUser.Role == UserRoleEnum.ADMIN)
-            {
-                var addUserViewPresenter = AppGlobalContext.Current.Resolve<AddUserViewPresenter>();
-                addUserViewPresenter.InitializePresenter();
-            }
+            CloseCurrentPresenter();
+            var cinemaListViewPresenter = AppGlobalContext.Current.Resolve<CinemaListViewPresenter>();
+            cinemaListViewPresenter.ParentView = View;
+            cinemaListViewPresenter.InitializePresenter();
+            View.baseLayout.Controls.Add(cinemaListViewPresenter.View);
+            CurrentPresenter = cinemaListViewPresenter;
         }
+        
+        public void InitializeFilmListView()
+        {
+            CloseCurrentPresenter();
+            var filmListViewPresenter = AppGlobalContext.Current.Resolve<FilmListViewPresenter>();
+            filmListViewPresenter.ParentView = View;
+            filmListViewPresenter.InitializePresenter();
+            View.baseLayout.Controls.Add(filmListViewPresenter.View);
+            CurrentPresenter = filmListViewPresenter;
+        }
+        
+//        public void OpenAddUserDialog()
+//        {
+//            if (AppGlobalContext.CurrentUser.Role == UserRoleEnum.ADMIN)
+//            {
+//                var addUserViewPresenter = AppGlobalContext.Current.Resolve<AddUserViewPresenter>();
+//                addUserViewPresenter.InitializePresenter();
+//            }
+//        }
 
         public void Exit()
         {
             AppGlobalContext.CurrentUser = null;
-            (CurrentPresenter as IPresenter).Dispose();
+            (CurrentPresenter as IPresenter)?.Dispose();
             View.baseLayout.Controls.Clear();
             View.mainMenu.Visible = false;
             View.baseLayout.Visible = false;
             LogIn();
+        }
+        
+        private void CloseCurrentPresenter()
+        {
+            if (CurrentPresenter != null)
+            {
+                (CurrentPresenter as IPresenter).Dispose();
+                View.baseLayout.Controls.Clear();
+            }
         }
     }
 }

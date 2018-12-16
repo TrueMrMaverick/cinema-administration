@@ -1,4 +1,4 @@
-﻿namespace HotelAdministation.Views
+﻿namespace HotelAdministation.Views.Base
 {
     /// <summary>
     ///     Интерфейс представления
@@ -27,12 +27,6 @@
         ///     Отобразить представление
         /// </summary>
         void Show(object mdiParent = null);
-
-        /// <summary>
-        ///     Отобразить представление
-        /// </summary>
-        /// <returns>True - DialogResult.OK, в противном случае False</returns>
-        bool ShowDialog(object owner);
 
         /// <summary>
         ///     Перевести форму в начало z-порядка

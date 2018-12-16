@@ -1,6 +1,7 @@
 ﻿using System;
 using HotelAdministation.Core.AppContext;
-using HotelAdministation.Views;
+using HotelAdministation.Presenters;
+using HotelAdministation.Views.Base;
 
 namespace HotelAdministation.Presenters
 {
@@ -67,6 +68,13 @@ namespace HotelAdministation.Presenters
         /// <summary>
         ///     Завершение жизненого цикла презентера
         /// </summary>
-        public abstract void Dispose();
+        public virtual void Dispose()
+        {
+            if (View != null)
+            {
+                View.Close();
+                View = null;
+            }
+        }
     }
 }

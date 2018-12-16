@@ -175,61 +175,67 @@
     <Compile Include="Core\DI\DependencyRegistrar.cs" />
     <Compile Include="Core\DI\IDependencyRegistrar.cs" />
     <Compile Include="Core\Singletone.cs" />
-    <Compile Include="Models\DbLog.cs" />
-    <Compile Include="Models\IModel.cs" />
-    <Compile Include="NewModels\Actor.cs" />
-    <Compile Include="NewModels\Area.cs" />
-    <Compile Include="NewModels\Cinema.cs" />
-    <Compile Include="NewModels\CinemaCategory.cs" />
-    <Compile Include="NewModels\cinemaContext.cs" />
-    <Compile Include="NewModels\CinemaStatus.cs" />
-    <Compile Include="NewModels\Director.cs" />
-    <Compile Include="NewModels\Film.cs" />
-    <Compile Include="NewModels\Genre.cs" />
-    <Compile Include="NewModels\Hall.cs" />
-    <Compile Include="NewModels\HallList.cs" />
-    <Compile Include="NewModels\INewModel.cs" />
-    <Compile Include="NewModels\ListOfActors.cs" />
-    <Compile Include="NewModels\ListOfDirectors.cs" />
-    <Compile Include="NewModels\ListOfOperators.cs" />
-    <Compile Include="NewModels\ListOfPrizes.cs" />
-    <Compile Include="NewModels\Operator.cs" />
-    <Compile Include="NewModels\Prize.cs" />
-    <Compile Include="NewModels\Production.cs" />
-    <Compile Include="NewModels\Seance.cs" />
-    <Compile Include="NewModels\UserRoles.cs" />
-    <Compile Include="NewModels\Users.cs" />
+    <Compile Include="Models\Actor.cs" />
+    <Compile Include="Models\Area.cs" />
+    <Compile Include="Models\Cinema.cs" />
+    <Compile Include="Models\CinemaCategory.cs" />
+    <Compile Include="Models\cinemaContext.cs" />
+    <Compile Include="Models\CinemaStatus.cs" />
+    <Compile Include="Models\Director.cs" />
+    <Compile Include="Models\Film.cs" />
+    <Compile Include="Models\Genre.cs" />
+    <Compile Include="Models\Hall.cs" />
+    <Compile Include="Models\HallList.cs" />
+    <Compile Include="Models\INewModel.cs" />
+    <Compile Include="Models\ListOfActors.cs" />
+    <Compile Include="Models\ListOfAreas.cs" />
+    <Compile Include="Models\ListOfCinemaCategories.cs" />
+    <Compile Include="Models\ListOfDirectors.cs" />
+    <Compile Include="Models\ListOfGenres.cs" />
+    <Compile Include="Models\ListOfOperators.cs" />
+    <Compile Include="Models\ListOfPrizes.cs" />
+    <Compile Include="Models\ListOfProductions.cs" />
+    <Compile Include="Models\Operator.cs" />
+    <Compile Include="Models\Prize.cs" />
+    <Compile Include="Models\Production.cs" />
+    <Compile Include="Models\Seance.cs" />
+    <Compile Include="Models\UserRoles.cs" />
+    <Compile Include="Models\Users.cs" />
     <Compile Include="Presenters\AbstractPresenter.cs" />
-    <Compile Include="Presenters\AddCustomerViewPresenter.cs" />
-    <Compile Include="Presenters\AddUserViewPresenter.cs" />
-    <Compile Include="Presenters\CheckInViewPresenter.cs" />
+    <Compile Include="Presenters\AddFilmViewPresenter.cs" />
+    <Compile Include="Presenters\AddListItemsViewPresenter.cs" />
+    <Compile Include="Presenters\CinemaListViewPresenter.cs" />
+    <Compile Include="Presenters\FilmListViewPresenter.cs" />
     <Compile Include="Presenters\IPresenter.cs" />
     <Compile Include="Presenters\LoginPresenter.cs" />
     <Compile Include="Presenters\MainViewPresenter.cs" />
-    <Compile Include="Servises\ActorService.cs" />
-    <Compile Include="Servises\AreaService.cs" />
-    <Compile Include="Servises\BaseEntityService.cs" />
-    <Compile Include="Servises\Base\BaseEntityService.cs" />
-    <Compile Include="Servises\Base\BaseTypeService.cs" />
-    <Compile Include="Servises\Base\ITypeService.cs" />
-    <Compile Include="Servises\CinemaCategoryService.cs" />
-    <Compile Include="Servises\CinemaService.cs" />
-    <Compile Include="Servises\CinemaStatusService.cs" />
-    <Compile Include="Servises\DirectorService.cs" />
-    <Compile Include="Servises\FilmService.cs" />
-    <Compile Include="Servises\GenreService.cs" />
-    <Compile Include="Servises\HallListService.cs" />
-    <Compile Include="Servises\HallService.cs" />
-    <Compile Include="Servises\ListOfActorsService.cs" />
-    <Compile Include="Servises\ListOfDirectorsService.cs" />
-    <Compile Include="Servises\ListOfOperatorsService.cs" />
-    <Compile Include="Servises\ListOfPrizesService.cs" />
-    <Compile Include="Servises\OperatorService.cs" />
-    <Compile Include="Servises\PrizeService.cs" />
-    <Compile Include="Servises\ProductionService.cs" />
-    <Compile Include="Servises\SeanceService.cs" />
-    <Compile Include="Servises\UserRolesService.cs" />
-    <Compile Include="Servises\UsersService.cs" />
+    <Compile Include="Services\ActorService.cs" />
+    <Compile Include="Services\AreaService.cs" />
+    <Compile Include="Services\Base\BaseEntityService.cs" />
+    <Compile Include="Services\Base\BaseTypeService.cs" />
+    <Compile Include="Services\Base\ITypeService.cs" />
+    <Compile Include="Services\CinemaCategoryService.cs" />
+    <Compile Include="Services\CinemaService.cs" />
+    <Compile Include="Services\CinemaStatusService.cs" />
+    <Compile Include="Services\DirectorService.cs" />
+    <Compile Include="Services\FilmService.cs" />
+    <Compile Include="Services\GenreService.cs" />
+    <Compile Include="Services\HallListService.cs" />
+    <Compile Include="Services\HallService.cs" />
+    <Compile Include="Services\ListOfActorsService.cs" />
+    <Compile Include="Services\ListOfAreasService.cs" />
+    <Compile Include="Services\ListOfCinemaCategoriesService.cs" />
+    <Compile Include="Services\ListOfDirectorsService.cs" />
+    <Compile Include="Services\ListOfGenresService.cs" />
+    <Compile Include="Services\ListOfOperatorsService.cs" />
+    <Compile Include="Services\ListOfPrizesService.cs" />
+    <Compile Include="Services\ListOfProductionsService.cs" />
+    <Compile Include="Services\OperatorService.cs" />
+    <Compile Include="Services\PrizeService.cs" />
+    <Compile Include="Services\ProductionService.cs" />
+    <Compile Include="Services\SeanceService.cs" />
+    <Compile Include="Services\UserRolesService.cs" />
+    <Compile Include="Services\UsersService.cs" />
     <Compile Include="ViewModels\ActorViewModel.cs" />
     <Compile Include="ViewModels\AreaViewModel.cs" />
     <Compile Include="ViewModels\Base\BaseViewModel.cs" />
@@ -239,49 +245,52 @@
     <Compile Include="ViewModels\DirectorViewModel.cs" />
     <Compile Include="ViewModels\Enums\UserRoleEnum.cs" />
     <Compile Include="ViewModels\Base\IViewModel.cs" />
-    <Compile Include="Models\CheckInList.cs" />
-    <Compile Include="Models\Customer.cs" />
-    <Compile Include="Models\Floor.cs" />
-    <Compile Include="Models\hotelContext.cs" />
-    <Compile Include="Models\Room.cs" />
-    <Compile Include="Models\RoomType.cs" />
-    <Compile Include="Models\StaffMember.cs" />
-    <Compile Include="Models\UserRole.cs" />
-    <Compile Include="Models\Users.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Servises\Base\IService.cs" />
+    <Compile Include="Services\Base\IService.cs" />
     <Compile Include="ViewModels\FilmViewModel.cs" />
     <Compile Include="ViewModels\GenreViewModel.cs" />
     <Compile Include="ViewModels\HallListViewModel.cs" />
     <Compile Include="ViewModels\HallViewModel.cs" />
     <Compile Include="ViewModels\ListOfActorsViewModel.cs" />
+    <Compile Include="ViewModels\ListOfAreasViewModel.cs" />
+    <Compile Include="ViewModels\ListOfCinemaCategoriesViewModel.cs" />
     <Compile Include="ViewModels\ListOfDirectorsViewModel.cs" />
+    <Compile Include="ViewModels\ListOfGenersViewModel.cs" />
     <Compile Include="ViewModels\ListOfOperatorsViewModel.cs" />
     <Compile Include="ViewModels\ListOfPrizesViewModel.cs" />
+    <Compile Include="ViewModels\ListOfProductionsViewModel.cs" />
     <Compile Include="ViewModels\OperatorViewModel.cs" />
     <Compile Include="ViewModels\PrizeViewModel.cs" />
     <Compile Include="ViewModels\ProductionViewModel.cs" />
     <Compile Include="ViewModels\SeanceViewModel.cs" />
     <Compile Include="ViewModels\UserRolesViewModel.cs" />
-    <Compile Include="ViewModels\UsersViewModel.cs" />
-    <Compile Include="Views\AddCustomerView.cs">
+    <Compile Include="ViewModels\UserViewModel.cs" />
+    <Compile Include="Views\AddFilmView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\AddCustomerView.Designer.cs">
-      <DependentUpon>AddCustomerView.cs</DependentUpon>
+    <Compile Include="Views\AddFilmView.Designer.cs">
+      <DependentUpon>AddFilmView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\AddUserView.cs" />
-    <Compile Include="Views\AddUserView.Designer.cs">
-      <DependentUpon>AddUserView.cs</DependentUpon>
+    <Compile Include="Views\AddListItemsView.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\CheckInView.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Views\CheckInView.Designer.cs">
-      <DependentUpon>CheckInView.cs</DependentUpon>
+    <Compile Include="Views\AddListItemsView.Designer.cs">
+      <DependentUpon>AddListItemsView.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Base\IView.cs" />
+    <Compile Include="Views\CinemaListView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\CinemaListView.Designer.cs">
+      <DependentUpon>CinemaListView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FilmListView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\FilmListView.Designer.cs">
+      <DependentUpon>FilmListView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\LoginView.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -303,14 +312,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Views\AddCustomerView.resx">
-      <DependentUpon>AddCustomerView.cs</DependentUpon>
+    <EmbeddedResource Include="Views\AddFilmView.resx">
+      <DependentUpon>AddFilmView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\AddUserView.resx">
-      <DependentUpon>AddUserView.cs</DependentUpon>
+    <EmbeddedResource Include="Views\AddListItemsView.resx">
+      <DependentUpon>AddListItemsView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\CheckInView.resx">
-      <DependentUpon>CheckInView.cs</DependentUpon>
+    <EmbeddedResource Include="Views\CinemaListView.resx">
+      <DependentUpon>CinemaListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FilmListView.resx">
+      <DependentUpon>FilmListView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\LoginView.resx">
       <DependentUpon>LoginView.cs</DependentUpon>

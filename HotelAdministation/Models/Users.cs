@@ -13,6 +13,6 @@ namespace HotelAdministation.Models
         public long Role { get; set; }
         public string Email { get; set; }
 
-        public UserRole RoleNavigation { get; set; }
+        public UserRoles RoleNavigation { get; set; }
     }
 }

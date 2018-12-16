@@ -30,12 +30,12 @@
         {
             this.mainMenu = new System.Windows.Forms.MenuStrip();
             this.administrationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addStaffToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addSystemUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.planingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cleaningToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cinemaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cinemaListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.baseLayout = new System.Windows.Forms.TableLayoutPanel();
+            this.filmListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mainMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -43,7 +43,7 @@
             // 
             this.mainMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.administrationToolStripMenuItem,
-            this.planingToolStripMenuItem,
+            this.cinemaToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.mainMenu.Location = new System.Drawing.Point(0, 0);
             this.mainMenu.Name = "mainMenu";
@@ -54,18 +54,11 @@
             // administrationToolStripMenuItem
             // 
             this.administrationToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addStaffToolStripMenuItem,
-            this.addSystemUserToolStripMenuItem});
+            this.addSystemUserToolStripMenuItem,
+            this.filmListToolStripMenuItem});
             this.administrationToolStripMenuItem.Name = "administrationToolStripMenuItem";
             this.administrationToolStripMenuItem.Size = new System.Drawing.Size(134, 20);
             this.administrationToolStripMenuItem.Text = "Администрирование";
-            // 
-            // addStaffToolStripMenuItem
-            // 
-            this.addStaffToolStripMenuItem.Name = "addStaffToolStripMenuItem";
-            this.addStaffToolStripMenuItem.Size = new System.Drawing.Size(255, 22);
-            this.addStaffToolStripMenuItem.Text = "Добавление сотрудника";
-            this.addStaffToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             // 
             // addSystemUserToolStripMenuItem
             // 
@@ -74,19 +67,20 @@
             this.addSystemUserToolStripMenuItem.Text = "Добавить пользователя системы";
             this.addSystemUserToolStripMenuItem.Click += new System.EventHandler(this.addSystemUserToolStripMenuItem_Click);
             // 
-            // planingToolStripMenuItem
+            // cinemaToolStripMenuItem
             // 
-            this.planingToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cleaningToolStripMenuItem});
-            this.planingToolStripMenuItem.Name = "planingToolStripMenuItem";
-            this.planingToolStripMenuItem.Size = new System.Drawing.Size(101, 20);
-            this.planingToolStripMenuItem.Text = "Планирование";
+            this.cinemaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cinemaListToolStripMenuItem});
+            this.cinemaToolStripMenuItem.Name = "cinemaToolStripMenuItem";
+            this.cinemaToolStripMenuItem.Size = new System.Drawing.Size(85, 20);
+            this.cinemaToolStripMenuItem.Text = "Кинотеатры";
             // 
-            // cleaningToolStripMenuItem
+            // cinemaListToolStripMenuItem
             // 
-            this.cleaningToolStripMenuItem.Name = "cleaningToolStripMenuItem";
-            this.cleaningToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
-            this.cleaningToolStripMenuItem.Text = "Уборка";
+            this.cinemaListToolStripMenuItem.Name = "cinemaListToolStripMenuItem";
+            this.cinemaListToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.cinemaListToolStripMenuItem.Text = "Список кинотеатров";
+            this.cinemaListToolStripMenuItem.Click += new System.EventHandler(this.cinemaListToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
@@ -111,6 +105,13 @@
             this.baseLayout.Size = new System.Drawing.Size(800, 426);
             this.baseLayout.TabIndex = 1;
             // 
+            // filmListToolStripMenuItem
+            // 
+            this.filmListToolStripMenuItem.Name = "filmListToolStripMenuItem";
+            this.filmListToolStripMenuItem.Size = new System.Drawing.Size(255, 22);
+            this.filmListToolStripMenuItem.Text = "Список фильмов";
+            this.filmListToolStripMenuItem.Click += new System.EventHandler(this.filmListToolStripMenuItem_Click);
+            // 
             // MainView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -132,11 +133,11 @@
 
         public System.Windows.Forms.MenuStrip mainMenu;
         private System.Windows.Forms.ToolStripMenuItem administrationToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem addStaffToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem planingToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cleaningToolStripMenuItem;
         public System.Windows.Forms.TableLayoutPanel baseLayout;
-        public System.Windows.Forms.ToolStripMenuItem addSystemUserToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem addSystemUserToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cinemaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cinemaListToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem filmListToolStripMenuItem;
     }
 }

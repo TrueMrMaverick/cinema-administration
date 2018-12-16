@@ -1,7 +1,8 @@
 ﻿using System;
 using System.IO;
-using HotelAdministation.Core.DI;
 using HotelAdministation.Views;
+using HotelAdministation.Core.DI;
+using HotelAdministation.ViewModels;
 using Unity;
 using Unity.Lifetime;
 using Unity.Registration;

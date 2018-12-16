@@ -1,6 +1,6 @@
 ﻿using System;
-using HotelAdministation.ViewModels;
 using HotelAdministation.Views;
+using HotelAdministation.ViewModels;
 using Unity;
 using Unity.Registration;
 
@@ -11,7 +11,7 @@ namespace HotelAdministation.Core.AppContext
         /// <summary>
         ///     Текущий пользователь
         /// </summary>
-        UsersViewModel CurrentUser { get; }
+        UserViewModel CurrentUser { get; }
 
         UnityContainer Container { get; }
 

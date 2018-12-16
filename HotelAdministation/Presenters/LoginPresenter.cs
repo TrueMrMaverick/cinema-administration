@@ -1,4 +1,5 @@
 ﻿using HotelAdministation.Core.AppContext;
+using HotelAdministation.Presenters;
 using HotelAdministation.Services;
 using HotelAdministation.Views;
 
@@ -7,24 +8,14 @@ namespace HotelAdministation.Presenters
     public class LoginPresenter : AbstractPresenter<LoginView, LoginPresenter>
     {
         public delegate void LoggedIn();
+
+        private UsersService service;
         public event LoggedIn LoggedInEvent;
-
-        private UserService service;
-
-
-        public override void Dispose()
-        {
-            if (View != null)
-            {
-                View.Close();
-                View = null;
-            }
-        }
 
 
         public override void InitializePresenter()
         {
-            service = AppGlobalContext.Current.Resolve<UserService>();
+            service = AppGlobalContext.Current.Resolve<UsersService>();
             CreateView();
             ShowView();
         }

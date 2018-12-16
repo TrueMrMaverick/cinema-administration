@@ -1,5 +1,5 @@
 ﻿using System;
-using HotelAdministation.Views;
+using HotelAdministation.Views.Base;
 
 namespace HotelAdministation.Presenters
 {

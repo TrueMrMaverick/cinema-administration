@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\Kathrine\.Rider2018.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Kathrine\.Rider2018.2\system\resharper-host\local\Transient\ReSharperHost\v182\SolutionCaches\_HotelAdministation.-373168771.00" t="ExcludeRecursive" />
+    <e p="E:\Projects\cinema-administration" t="IncludeFlat">
+      <e p="HotelAdministation" t="IncludeRecursive">
+        <e p="App.config" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Core" t="Include">
+          <e p="AppContext" t="Include">
+            <e p="AppContext.cs" t="Include" />
+            <e p="AppGlobalContext.cs" t="Include" />
+            <e p="IContext.cs" t="Include" />
+          </e>
+          <e p="DI" t="Include">
+            <e p="DependencyRegistrar.cs" t="Include" />
+            <e p="IDependencyRegistrar.cs" t="Include" />
+          </e>
+          <e p="Singletone.cs" t="Include" />
+        </e>
+        <e p="HotelAdministation.csproj" t="IncludeRecursive" />
+        <e p="Models" t="Include">
+          <e p="Actor.cs" t="Include" />
+          <e p="Area.cs" t="Include" />
+          <e p="Cinema.cs" t="Include" />
+          <e p="CinemaCategory.cs" t="Include" />
+          <e p="cinemaContext.cs" t="Include" />
+          <e p="CinemaStatus.cs" t="Include" />
+          <e p="Director.cs" t="Include" />
+          <e p="Film.cs" t="Include" />
+          <e p="Genre.cs" t="Include" />
+          <e p="Hall.cs" t="Include" />
+          <e p="HallList.cs" t="Include" />
+          <e p="INewModel.cs" t="Include" />
+          <e p="ListOfActors.cs" t="Include" />
+          <e p="ListOfAreas.cs" t="Include" />
+          <e p="ListOfCinemaCategories.cs" t="Include" />
+          <e p="ListOfDirectors.cs" t="Include" />
+          <e p="ListOfGenres.cs" t="Include" />
+          <e p="ListOfOperators.cs" t="Include" />
+          <e p="ListOfPrizes.cs" t="Include" />
+          <e p="ListOfProductions.cs" t="Include" />
+          <e p="Operator.cs" t="Include" />
+          <e p="Prize.cs" t="Include" />
+          <e p="Production.cs" t="Include" />
+          <e p="Seance.cs" t="Include" />
+          <e p="UserRoles.cs" t="Include" />
+          <e p="Users.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="Presenters" t="Include">
+          <e p="AbstractPresenter.cs" t="Include" />
+          <e p="AddFilmViewPresenter.cs" t="Include" />
+          <e p="AddListItemsViewPresenter.cs" t="Include" />
+          <e p="CinemaListViewPresenter.cs" t="Include" />
+          <e p="FilmListViewPresenter.cs" t="Include" />
+          <e p="IPresenter.cs" t="Include" />
+          <e p="LoginPresenter.cs" t="Include" />
+          <e p="MainViewPresenter.cs" t="Include" />
+        </e>
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+          <e p="DataSources" t="Include">
+            <e p="HotelAdministation.Models.CheckInList.datasource" t="Include" />
+          </e>
+          <e p="Resources.Designer.cs" t="Include" />
+          <e p="Resources.resx" t="Include" />
+          <e p="Settings.Designer.cs" t="Include" />
+          <e p="Settings.settings" t="Include" />
+        </e>
+        <e p="Services" t="Include">
+          <e p="ActorService.cs" t="Include" />
+          <e p="AreaService.cs" t="Include" />
+          <e p="Base" t="Include">
+            <e p="BaseEntityService.cs" t="Include" />
+            <e p="BaseTypeService.cs" t="Include" />
+            <e p="IService.cs" t="Include" />
+            <e p="ITypeService.cs" t="Include" />
+          </e>
+          <e p="CinemaCategoryService.cs" t="Include" />
+          <e p="CinemaService.cs" t="Include" />
+          <e p="CinemaStatusService.cs" t="Include" />
+          <e p="DirectorService.cs" t="Include" />
+          <e p="FilmService.cs" t="Include" />
+          <e p="GenreService.cs" t="Include" />
+          <e p="HallListService.cs" t="Include" />
+          <e p="HallService.cs" t="Include" />
+          <e p="ListOfActorsService.cs" t="Include" />
+          <e p="ListOfAreasService.cs" t="Include" />
+          <e p="ListOfCinemaCategoriesService.cs" t="Include" />
+          <e p="ListOfDirectorsService.cs" t="Include" />
+          <e p="ListOfGenresService.cs" t="Include" />
+          <e p="ListOfOperatorsService.cs" t="Include" />
+          <e p="ListOfPrizesService.cs" t="Include" />
+          <e p="ListOfProductionsService.cs" t="Include" />
+          <e p="OperatorService.cs" t="Include" />
+          <e p="PrizeService.cs" t="Include" />
+          <e p="ProductionService.cs" t="Include" />
+          <e p="SeanceService.cs" t="Include" />
+          <e p="UserRolesService.cs" t="Include" />
+          <e p="UsersService.cs" t="Include" />
+        </e>
+        <e p="ViewModels" t="Include">
+          <e p="ActorViewModel.cs" t="Include" />
+          <e p="AreaViewModel.cs" t="Include" />
+          <e p="Base" t="Include">
+            <e p="BaseViewModel.cs" t="Include" />
+            <e p="IViewModel.cs" t="Include" />
+          </e>
+          <e p="CinemaCategoryViewModel.cs" t="Include" />
+          <e p="CinemaStatusViewModel.cs" t="Include" />
+          <e p="CinemaViewModel.cs" t="Include" />
+          <e p="DirectorViewModel.cs" t="Include" />
+          <e p="Enums" t="Include">
+            <e p="UserRoleEnum.cs" t="Include" />
+          </e>
+          <e p="FilmViewModel.cs" t="Include" />
+          <e p="GenreViewModel.cs" t="Include" />
+          <e p="HallListViewModel.cs" t="Include" />
+          <e p="HallViewModel.cs" t="Include" />
+          <e p="ListOfActorsViewModel.cs" t="Include" />
+          <e p="ListOfAreasViewModel.cs" t="Include" />
+          <e p="ListOfCinemaCategoriesViewModel.cs" t="Include" />
+          <e p="ListOfDirectorsViewModel.cs" t="Include" />
+          <e p="ListOfGenersViewModel.cs" t="Include" />
+          <e p="ListOfOperatorsViewModel.cs" t="Include" />
+          <e p="ListOfPrizesViewModel.cs" t="Include" />
+          <e p="ListOfProductionsViewModel.cs" t="Include" />
+          <e p="OperatorViewModel.cs" t="Include" />
+          <e p="PrizeViewModel.cs" t="Include" />
+          <e p="ProductionViewModel.cs" t="Include" />
+          <e p="SeanceViewModel.cs" t="Include" />
+          <e p="UserRolesViewModel.cs" t="Include" />
+          <e p="UserViewModel.cs" t="Include" />
+        </e>
+        <e p="Views" t="Include">
+          <e p="AddFilmView.cs" t="Include" />
+          <e p="AddFilmView.Designer.cs" t="Include" />
+          <e p="AddFilmView.resx" t="Include" />
+          <e p="AddListItemsView.cs" t="Include" />
+          <e p="AddListItemsView.Designer.cs" t="Include" />
+          <e p="AddListItemsView.resx" t="Include" />
+          <e p="Base" t="Include">
+            <e p="IView.cs" t="Include" />
+          </e>
+          <e p="CinemaListView.cs" t="Include" />
+          <e p="CinemaListView.Designer.cs" t="Include" />
+          <e p="CinemaListView.resx" t="Include" />
+          <e p="FilmListView.cs" t="Include" />
+          <e p="FilmListView.Designer.cs" t="Include" />
+          <e p="FilmListView.resx" t="Include" />
+          <e p="LoginView.cs" t="Include" />
+          <e p="LoginView.Designer.cs" t="Include" />
+          <e p="LoginView.resx" t="Include" />
+          <e p="MainView.cs" t="Include" />
+          <e p="MainView.Designer.cs" t="Include" />
+          <e p="MainView.resx" t="Include" />
+        </e>
+      </e>
+      <e p="HotelAdministation.sln" t="IncludeFlat" />
+      <e p="packages" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using HotelAdministation.Presenters;
+using HotelAdministation.Views.Base;
 
 namespace HotelAdministation.Views
 {
@@ -31,12 +32,7 @@ namespace HotelAdministation.Views
             if (mdiParent != null) Parent = mdiParent as Form;
             Visible = true;
         }
-
-        public bool ShowDialog(object owner)
-        {
-            return false; /*base.ShowDialog(owner as IWin32Window) == System.Windows.Forms.DialogResult.OK;*/
-        }
-
+        
         public void Close()
         {
             Visible = false;

@@ -1,12 +1,12 @@
 ﻿using System.Runtime.CompilerServices;
-using HotelAdministation.ViewModels;
 using HotelAdministation.Views;
+using HotelAdministation.ViewModels;
 
 namespace HotelAdministation.Core.AppContext
 {
     public class AppGlobalContext
     {
-        public static UsersViewModel CurrentUser { get; set; }
+        public static UserViewModel CurrentUser { get; set; }
 
         public static IContext Current
         {
