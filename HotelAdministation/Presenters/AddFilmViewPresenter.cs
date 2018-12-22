@@ -113,9 +113,13 @@ namespace HotelAdministation.Presenters
 
             bool inItemsToSave = itemsToSave.ContainsKey(info);
             bool inInitialItems = initialItems.ContainsKey(info);
+            bool inItemsToDelete = itemsToDelete.ContainsKey(info);
 
             List<object> selectedItems = inItemsToSave ? itemsToSave[info] : new List<object>();
-            selectedItems = inInitialItems ? selectedItems.Concat(initialItems[info]).ToList() : selectedItems;
+
+            List<object> selectedInitialItems = inInitialItems && inItemsToDelete ? initialItems[info].Except(itemsToDelete[info]).ToList() : initialItems[info];
+
+            selectedItems = inInitialItems ? selectedItems.Concat(selectedInitialItems).ToList() : selectedItems;
 
             addListItemsPresenter.InitializePresenter(info, selectedItems);
             addListItemsPresenter.Selected += UpdateFilmInfo;
