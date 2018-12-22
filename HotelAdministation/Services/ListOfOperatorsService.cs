@@ -33,5 +33,27 @@ namespace HotelAdministation.Services
                 Operator = listOfOperatorsOperatorService.GetById(model.Operator)
             };
         }
+
+        public List<ListOfOperatorsViewModel> GetByFilmId(long filmId)
+        {
+            var viewModelList = new List<ListOfOperatorsViewModel>();
+            foreach (var item in GetModelsFromContext().ToList())
+            {
+                viewModelList.Add(ToView(item));
+            }
+
+            return viewModelList.Where(item => item.Film.Id == filmId).ToList();
+        }
+
+        public ListOfOperatorsViewModel GetByCombination(long filmId, long id)
+        {
+            var viewModelList = new List<ListOfOperatorsViewModel>();
+            foreach (var item in GetModelsFromContext().ToList())
+            {
+                viewModelList.Add(ToView(item));
+            }
+
+            return viewModelList.Find(item => item.Film.Id == filmId && item.Operator.Id == id);
+        }
     }
 }

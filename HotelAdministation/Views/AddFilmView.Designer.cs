@@ -36,6 +36,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.addBtn = new System.Windows.Forms.Button();
             this.cancelBtn = new System.Windows.Forms.Button();
+            this.directorsButton = new System.Windows.Forms.Button();
+            this.operatorsButton = new System.Windows.Forms.Button();
+            this.actorsButton = new System.Windows.Forms.Button();
+            this.genresButton = new System.Windows.Forms.Button();
+            this.productionButton = new System.Windows.Forms.Button();
+            this.prizesButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -95,8 +101,9 @@
             this.addBtn.Name = "addBtn";
             this.addBtn.Size = new System.Drawing.Size(75, 23);
             this.addBtn.TabIndex = 6;
-            this.addBtn.Text = "Добавить";
+            this.addBtn.Text = "Сохранить";
             this.addBtn.UseVisualStyleBackColor = true;
+            this.addBtn.Click += new System.EventHandler(this.addBtn_Click);
             // 
             // cancelBtn
             // 
@@ -106,12 +113,79 @@
             this.cancelBtn.TabIndex = 7;
             this.cancelBtn.Text = "Отмена";
             this.cancelBtn.UseVisualStyleBackColor = true;
+            this.cancelBtn.Click += new System.EventHandler(this.cancelBtn_Click);
+            // 
+            // directorsButton
+            // 
+            this.directorsButton.Location = new System.Drawing.Point(13, 154);
+            this.directorsButton.Name = "directorsButton";
+            this.directorsButton.Size = new System.Drawing.Size(188, 23);
+            this.directorsButton.TabIndex = 8;
+            this.directorsButton.Text = "Режисёры";
+            this.directorsButton.UseVisualStyleBackColor = true;
+            this.directorsButton.Click += new System.EventHandler(this.directorsButton_Click);
+            // 
+            // operatorsButton
+            // 
+            this.operatorsButton.Location = new System.Drawing.Point(13, 183);
+            this.operatorsButton.Name = "operatorsButton";
+            this.operatorsButton.Size = new System.Drawing.Size(188, 23);
+            this.operatorsButton.TabIndex = 9;
+            this.operatorsButton.Text = "Операторы";
+            this.operatorsButton.UseVisualStyleBackColor = true;
+            this.operatorsButton.Click += new System.EventHandler(this.operatorsButton_Click);
+            // 
+            // actorsButton
+            // 
+            this.actorsButton.Location = new System.Drawing.Point(13, 212);
+            this.actorsButton.Name = "actorsButton";
+            this.actorsButton.Size = new System.Drawing.Size(188, 23);
+            this.actorsButton.TabIndex = 10;
+            this.actorsButton.Text = "Актёры";
+            this.actorsButton.UseVisualStyleBackColor = true;
+            this.actorsButton.Click += new System.EventHandler(this.actorsButton_Click);
+            // 
+            // genresButton
+            // 
+            this.genresButton.Location = new System.Drawing.Point(13, 263);
+            this.genresButton.Name = "genresButton";
+            this.genresButton.Size = new System.Drawing.Size(188, 23);
+            this.genresButton.TabIndex = 11;
+            this.genresButton.Text = "Жанры";
+            this.genresButton.UseVisualStyleBackColor = true;
+            this.genresButton.Click += new System.EventHandler(this.genresButton_Click);
+            // 
+            // productionButton
+            // 
+            this.productionButton.Location = new System.Drawing.Point(13, 292);
+            this.productionButton.Name = "productionButton";
+            this.productionButton.Size = new System.Drawing.Size(188, 23);
+            this.productionButton.TabIndex = 12;
+            this.productionButton.Text = "Студии";
+            this.productionButton.UseVisualStyleBackColor = true;
+            this.productionButton.Click += new System.EventHandler(this.productionButton_Click);
+            // 
+            // prizesButton
+            // 
+            this.prizesButton.Location = new System.Drawing.Point(13, 321);
+            this.prizesButton.Name = "prizesButton";
+            this.prizesButton.Size = new System.Drawing.Size(188, 23);
+            this.prizesButton.TabIndex = 13;
+            this.prizesButton.Text = "Награды";
+            this.prizesButton.UseVisualStyleBackColor = true;
+            this.prizesButton.Click += new System.EventHandler(this.prizesButton_Click);
             // 
             // AddFilmView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(440, 444);
+            this.Controls.Add(this.prizesButton);
+            this.Controls.Add(this.productionButton);
+            this.Controls.Add(this.genresButton);
+            this.Controls.Add(this.actorsButton);
+            this.Controls.Add(this.operatorsButton);
+            this.Controls.Add(this.directorsButton);
             this.Controls.Add(this.cancelBtn);
             this.Controls.Add(this.addBtn);
             this.Controls.Add(this.rentalPrice);
@@ -130,12 +204,18 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox filmName;
+        public System.Windows.Forms.TextBox filmName;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DateTimePicker durationTimePicker;
-        private System.Windows.Forms.TextBox rentalPrice;
+        public System.Windows.Forms.DateTimePicker durationTimePicker;
+        public System.Windows.Forms.TextBox rentalPrice;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button addBtn;
         private System.Windows.Forms.Button cancelBtn;
+        private System.Windows.Forms.Button directorsButton;
+        private System.Windows.Forms.Button operatorsButton;
+        private System.Windows.Forms.Button actorsButton;
+        private System.Windows.Forms.Button genresButton;
+        private System.Windows.Forms.Button productionButton;
+        private System.Windows.Forms.Button prizesButton;
     }
 }

@@ -31,8 +31,11 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.FilmDataGridView = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.addFilmButton = new System.Windows.Forms.Button();
+            this.editFilmButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.FilmDataGridView)).BeginInit();
+            this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -51,12 +54,15 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(719, 385);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
-            // CinemaDataGridView
+            // FilmDataGridView
             // 
             this.FilmDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.FilmDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.FilmDataGridView.Location = new System.Drawing.Point(3, 3);
+            this.FilmDataGridView.MultiSelect = false;
             this.FilmDataGridView.Name = "FilmDataGridView";
+            this.FilmDataGridView.ReadOnly = true;
+            this.FilmDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.FilmDataGridView.Size = new System.Drawing.Size(713, 303);
             this.FilmDataGridView.TabIndex = 0;
             // 
@@ -65,6 +71,8 @@
             this.tableLayoutPanel2.ColumnCount = 2;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Controls.Add(this.addFilmButton, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.editFilmButton, 0, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 312);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -73,6 +81,28 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(713, 70);
             this.tableLayoutPanel2.TabIndex = 1;
+            // 
+            // addFilmButton
+            // 
+            this.addFilmButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.addFilmButton.Location = new System.Drawing.Point(359, 3);
+            this.addFilmButton.Name = "addFilmButton";
+            this.addFilmButton.Size = new System.Drawing.Size(351, 64);
+            this.addFilmButton.TabIndex = 0;
+            this.addFilmButton.Text = "Добавить фильм";
+            this.addFilmButton.UseVisualStyleBackColor = true;
+            this.addFilmButton.Click += new System.EventHandler(this.addFilmButton_Click);
+            // 
+            // editFilmButton
+            // 
+            this.editFilmButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.editFilmButton.Location = new System.Drawing.Point(3, 3);
+            this.editFilmButton.Name = "editFilmButton";
+            this.editFilmButton.Size = new System.Drawing.Size(350, 64);
+            this.editFilmButton.TabIndex = 1;
+            this.editFilmButton.Text = "Редактировать Фильм";
+            this.editFilmButton.UseVisualStyleBackColor = true;
+            this.editFilmButton.Click += new System.EventHandler(this.editFilmButton_Click);
             // 
             // FilmListView
             // 
@@ -83,6 +113,7 @@
             this.Size = new System.Drawing.Size(719, 385);
             this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.FilmDataGridView)).EndInit();
+            this.tableLayoutPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -92,5 +123,7 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         public System.Windows.Forms.DataGridView FilmDataGridView;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.Button addFilmButton;
+        private System.Windows.Forms.Button editFilmButton;
     }
 }

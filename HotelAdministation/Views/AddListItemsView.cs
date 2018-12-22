@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using HotelAdministation.Presenters;
+using HotelAdministation.Presenters.Enum;
 using HotelAdministation.Views.Base;
 
 namespace HotelAdministation.Views
@@ -23,12 +24,27 @@ namespace HotelAdministation.Views
 
         public void Show(object mdiParent = null)
         {
-            throw new NotImplementedException();
+            Visible = true;
         }
 
         public void ActivateView()
         {
-            throw new NotImplementedException();
+            if (Disposing || IsDisposed) return;
+
+            Show();
+
+            BringToFront();
+        }
+
+        private void addButton_Click(object sender, EventArgs e)
+        {
+            Presenter.InitializeAddView();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Presenter.Select();
+            Presenter.Dispose();
         }
     }
 }

@@ -5,7 +5,7 @@ namespace HotelAdministation.ViewModels
 {
     public class UserViewModel : BaseViewModel
     {
-        public long Id { get; set; }
+        public override long Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string SecondName { get; set; }

@@ -23,7 +23,7 @@ namespace HotelAdministation.Services.Base
             return viewList;
         }
 
-        public virtual TViewModel SafeItem(TViewModel item)
+        public virtual TViewModel SaveItem(TViewModel item)
         {
             var model = ToModel(item);
             using (var db = new cinemaContext())
@@ -32,11 +32,34 @@ namespace HotelAdministation.Services.Base
                 modelList.Add(model);
                 db.SaveChanges();
                 modelList = db.Set<TModel>();
+                model = modelList.Last();
                 return ToView(model);
             }
         }
 
-        public virtual List<TViewModel> SafeList(List<TViewModel> items)
+        public virtual TViewModel UpdateItem(TViewModel item)
+        {
+            var model = ToModel(GetById(item.Id));
+            using (var db = new cinemaContext())
+            {
+                db.Entry(model).CurrentValues.SetValues(ToModel(item));
+                db.SaveChanges();
+                return ToView(model);
+            }
+        }
+
+        public virtual void RemoveItem(TViewModel item)
+        {
+            var model = ToModel(item);
+            using (var db = new cinemaContext())
+            {
+                var modelSet = db.Set<TModel>();
+                modelSet.Remove(model);
+                db.SaveChanges();
+            }
+        }
+
+        public virtual List<TViewModel> SaveList(List<TViewModel> items)
         {
             throw new NotImplementedException();
         }

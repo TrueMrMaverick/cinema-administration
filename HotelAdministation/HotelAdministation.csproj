@@ -202,9 +202,16 @@
     <Compile Include="Models\UserRoles.cs" />
     <Compile Include="Models\Users.cs" />
     <Compile Include="Presenters\AbstractPresenter.cs" />
+    <Compile Include="Presenters\AddActorViewPresenter.cs" />
     <Compile Include="Presenters\AddFilmViewPresenter.cs" />
+    <Compile Include="Presenters\AddGenreViewPresenter.cs" />
     <Compile Include="Presenters\AddListItemsViewPresenter.cs" />
+    <Compile Include="Presenters\AddOperatorViewPresenter.cs" />
+    <Compile Include="Presenters\AddPrizeViewPresenter.cs" />
+    <Compile Include="Presenters\AddProductionViewPresenter.cs" />
     <Compile Include="Presenters\CinemaListViewPresenter.cs" />
+    <Compile Include="Presenters\AddDirectorViewPresenter.cs" />
+    <Compile Include="Presenters\Enum\FilmInfo.cs" />
     <Compile Include="Presenters\FilmListViewPresenter.cs" />
     <Compile Include="Presenters\IPresenter.cs" />
     <Compile Include="Presenters\LoginPresenter.cs" />
@@ -238,7 +245,9 @@
     <Compile Include="Services\UsersService.cs" />
     <Compile Include="ViewModels\ActorViewModel.cs" />
     <Compile Include="ViewModels\AreaViewModel.cs" />
+    <Compile Include="ViewModels\Base\BaseMetaViewModel.cs" />
     <Compile Include="ViewModels\Base\BaseViewModel.cs" />
+    <Compile Include="ViewModels\Base\BaseStaffViewModel.cs" />
     <Compile Include="ViewModels\CinemaCategoryViewModel.cs" />
     <Compile Include="ViewModels\CinemaStatusViewModel.cs" />
     <Compile Include="ViewModels\CinemaViewModel.cs" />
@@ -266,17 +275,47 @@
     <Compile Include="ViewModels\SeanceViewModel.cs" />
     <Compile Include="ViewModels\UserRolesViewModel.cs" />
     <Compile Include="ViewModels\UserViewModel.cs" />
+    <Compile Include="Views\AddActorView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AddActorView.Designer.cs">
+      <DependentUpon>AddActorView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\AddFilmView.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\AddFilmView.Designer.cs">
       <DependentUpon>AddFilmView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\AddGenreView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AddGenreView.Designer.cs">
+      <DependentUpon>AddGenreView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\AddListItemsView.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\AddListItemsView.Designer.cs">
       <DependentUpon>AddListItemsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AddOperatorView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AddOperatorView.Designer.cs">
+      <DependentUpon>AddOperatorView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AddPrizeView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AddPrizeView.Designer.cs">
+      <DependentUpon>AddPrizeView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AddProductionView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AddProductionView.Designer.cs">
+      <DependentUpon>AddProductionView.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Base\IView.cs" />
     <Compile Include="Views\CinemaListView.cs">
@@ -290,6 +329,12 @@
     </Compile>
     <Compile Include="Views\FilmListView.Designer.cs">
       <DependentUpon>FilmListView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AddDirectorView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AddDirectorView.Designer.cs">
+      <DependentUpon>AddDirectorView.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\LoginView.cs">
       <SubType>UserControl</SubType>
@@ -312,11 +357,29 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Views\AddActorView.resx">
+      <DependentUpon>AddActorView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\AddDirectorView.resx">
+      <DependentUpon>AddDirectorView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\AddFilmView.resx">
       <DependentUpon>AddFilmView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\AddGenreView.resx">
+      <DependentUpon>AddGenreView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\AddListItemsView.resx">
       <DependentUpon>AddListItemsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\AddOperatorView.resx">
+      <DependentUpon>AddOperatorView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\AddPrizeView.resx">
+      <DependentUpon>AddPrizeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\AddProductionView.resx">
+      <DependentUpon>AddProductionView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\CinemaListView.resx">
       <DependentUpon>CinemaListView.cs</DependentUpon>

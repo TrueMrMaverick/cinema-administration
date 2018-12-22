@@ -7,9 +7,9 @@ using HotelAdministation.ViewModels.Base;
 
 namespace HotelAdministation.ViewModels
 {
-    public class GenreViewModel : BaseViewModel
+    public class GenreViewModel : BaseMetaViewModel
     {
-        public long Id { get; set; }
-        public string Name { get; set; }
+        public override long Id { get; set; }
+        public override string Name { get; set; }
     }
 }

@@ -7,10 +7,10 @@ using HotelAdministation.ViewModels.Base;
 
 namespace HotelAdministation.ViewModels
 {
-    public class OperatorViewModel : BaseViewModel
+    public class OperatorViewModel : BaseStaffViewModel
     {
-        public long Id { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
+        public override long Id { get; set; }
+        public override string FirstName { get; set; }
+        public override string LastName { get; set; }
     }
 }

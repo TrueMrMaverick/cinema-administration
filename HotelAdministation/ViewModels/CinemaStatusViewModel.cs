@@ -9,7 +9,7 @@ namespace HotelAdministation.ViewModels
 {
     public class CinemaStatusViewModel : BaseViewModel
     {
-        public long Id { get; set; }
+        public override long Id { get; set; }
         public string Status { get; set; }
     }
 }

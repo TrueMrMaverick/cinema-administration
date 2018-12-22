@@ -9,7 +9,7 @@ namespace HotelAdministation.ViewModels
 {
     public class ListOfDirectorsViewModel : BaseViewModel
     {
-        public long Id { get; set; }
+        public override long Id { get; set; }
         public FilmViewModel Film { get; set; }
         public DirectorViewModel Director { get; set; }
     }

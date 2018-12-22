@@ -4,7 +4,7 @@ namespace HotelAdministation.ViewModels
 {
     public class ListOfAreasViewModel: BaseViewModel
     {
-        public long Id { get; set; }
+        public override long Id { get; set; }
         public CinemaViewModel Cinema { get; set; }
         public AreaViewModel Area { get; set; }
     }

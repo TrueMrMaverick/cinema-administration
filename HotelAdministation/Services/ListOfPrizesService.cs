@@ -33,5 +33,27 @@ namespace HotelAdministation.Services
                 Prize = listOfPrizesPrizeService.GetById(model.Prize)
             };
         }
+
+        public List<ListOfPrizesViewModel> GetByFilmId(long filmId)
+        {
+            var viewModelList = new List<ListOfPrizesViewModel>();
+            foreach (var item in GetModelsFromContext().ToList())
+            {
+                viewModelList.Add(ToView(item));
+            }
+
+            return viewModelList.Where(item => !(item.Film is null) && item.Film.Id == filmId).ToList();
+        }
+
+        public ListOfPrizesViewModel GetByCombination(long filmId, long id)
+        {
+            var viewModelList = new List<ListOfPrizesViewModel>();
+            foreach (var item in GetModelsFromContext().ToList())
+            {
+                viewModelList.Add(ToView(item));
+            }
+
+            return viewModelList.Find(item => item.Film.Id == filmId && item.Prize.Id == id);
+        }
     }
 }

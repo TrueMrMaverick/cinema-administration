@@ -33,5 +33,27 @@ namespace HotelAdministation.Services
                 Director = listOfDirectorsDirectorService.GetById(model.Director)
             };
         }
+
+        public List<ListOfDirectorsViewModel> GetByFilmId(long filmId)
+        {
+            var viewModelList = new List<ListOfDirectorsViewModel>();
+            foreach (var item in GetModelsFromContext().ToList())
+            {
+                viewModelList.Add(ToView(item));
+            }
+
+            return viewModelList.Where(item => item.Film.Id == filmId).ToList();
+        }
+
+        public ListOfDirectorsViewModel GetByCombination(long filmId, long directorId)
+        {
+            var viewModelList = new List<ListOfDirectorsViewModel>();
+            foreach (var item in GetModelsFromContext().ToList())
+            {
+                viewModelList.Add(ToView(item));
+            }
+
+            return viewModelList.Find(item => item.Film.Id == filmId && item.Director.Id == directorId);
+        }
     }
 }

@@ -2,6 +2,8 @@ using HotelAdministation.Core.AppContext;
 using HotelAdministation.Models;
 using HotelAdministation.Services.Base;
 using HotelAdministation.ViewModels;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace HotelAdministation.Services
 {
@@ -28,6 +30,26 @@ namespace HotelAdministation.Services
                 Film = filmService.GetById(model.Film),
                 Genre = genreService.GetById(model.Genre)
             };
+        }
+
+        public List<ListOfGenersViewModel> GetByFilmId(long filmId)
+        {
+            var viewModelList = new List<ListOfGenersViewModel>();
+            foreach (var item in GetModelsFromContext().ToList())
+            {
+                viewModelList.Add(ToView(item));
+            }
+            return viewModelList.Where(item => item.Film.Id == filmId).ToList();
+        }
+
+        public ListOfGenersViewModel GetByCombination(long filmId, long genreId)
+        {
+            var viewModelList = new List<ListOfGenersViewModel>();
+            foreach (var item in GetModelsFromContext().ToList())
+            {
+                viewModelList.Add(ToView(item));
+            }
+            return viewModelList.Find(item => item.Film.Id == filmId && item.Genre.Id == genreId);
         }
     }
 }

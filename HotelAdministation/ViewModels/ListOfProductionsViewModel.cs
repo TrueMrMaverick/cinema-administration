@@ -6,6 +6,6 @@ namespace HotelAdministation.ViewModels
     {
         public long Id { get; set; }
         public FilmViewModel Film { get; set; }
-        public GenreViewModel Genre { get; set; }
+        public ProductionViewModel Production { get; set; }
     }
 }

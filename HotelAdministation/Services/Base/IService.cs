@@ -15,8 +15,8 @@ namespace HotelAdministation.Services.Base
         ViewModel GetById(long id);
         List<ViewModel> GetList();
 
-        ViewModel SafeItem(ViewModel item);
-        List<ViewModel> SafeList(List<ViewModel> items);
+        ViewModel SaveItem(ViewModel item);
+        List<ViewModel> SaveList(List<ViewModel> items);
 
         ViewModel ToView(Model model);
         Model ToModel(ViewModel model);
